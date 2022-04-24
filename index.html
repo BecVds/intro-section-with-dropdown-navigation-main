@@ -5,35 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="overlay hidden"></div>
+  <div class="mobile-display hidden">        
+    <button class="burger-nav-button">
+      <img src="./images/icon-close-menu.svg" alt="close-menu-button">
+    </button>        
+    <div class="side-nav">
+      <button>Features</button>
+      <div class="mobile-drop-down features">
+        <button>
+          <img src="./images/icon-todo.svg" alt="todo-icon">
+          Todo List
+        </button>
+        <button>
+          <img src="./images/icon-calendar.svg" alt="calender-icon">
+          Calender
+        </button>
+        <button>
+          <img src="./images/icon-reminders.svg" alt="reminders-icon">
+          Reminders
+        </button>
+        <button>
+          <div class="nav-icon-container">
+            <img src="./images/icon-planning.svg" alt="planning-icon">
+          </div>              
+          Planning
+        </button>
+      </div>
+      <button>Company</button>
+      <div class="mobile-drop-down company">
+        <button>
+          Todo List
+        </button>
+        <button>
+          Calender
+        </button>
+        <button>
+          Reminders
+        </button>
+      </div>
+    </div>
   </div>
+  <nav>
+    <div class="left-logo">
+      <img src="./images/logo.svg" alt="logo">
+    </div>
+    <div class="desktop-display hidden">
+      <div class="buttons">
+        <div class="left">
+          <button>Features</button>
+          <button>Company</button>
+          <button>Careers</button>
+          <button>About</button>
+        </div>
+        <div class="right">
+          <button>Login</button>
+          <button>Register</button>
+        </div>
+      </div>
+    </div>
+    <button class="burger-nav-button">
+      <img src="./images/icon-menu.svg" alt="menu-button">
+    </button>    
+  </nav>
+  <div class="mainBody">    
+    <div class="main-container">
+      <div class="left-container">
+        <h1>Make remote work</h1>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes, 
+          create team rituals, and watch productivity soar.
+        </p>
+        <button>Learn more</button>
+        <div class="logos">
+          <div class="img-container">
+            <img src="./images/client-databiz.svg" alt="databiz">
+          </div>
+          <div class="img-container">
+            <img src="./images/client-audiophile.svg" alt="audiophile">
+          </div>
+          <div class="img-container">
+            <img src="./images/client-meet.svg" alt="meet">
+          </div>
+          <div class="img-container">
+            <img src="./images/client-maker.svg" alt="maker">
+          </div>
+        </div>
+      </div>
+      <div class="img-container">
+        <img src="./images/image-hero-mobile.png" alt="hero image">
+      </div>
+    </div>
+  </div>
+  
 </body>
 </html>
