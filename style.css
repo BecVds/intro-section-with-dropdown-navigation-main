@@ -64,22 +64,33 @@ nav {
     top: 0px;
     padding-top: 20px;
     z-index: 3;
+    height: 100vh; 
+}
+.mobile-drop-down > button {
+    padding-left: 20px;
 }
 .mobile-drop-down {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 .side-nav button {
     border: none;
     background-color: transparent;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    gap: 30px 20px;
 }
 .mobile-display .burger-nav-button { 
-    padding-right: 15px;   
+    padding-right: 15px;  
 }
 .side-nav {
     width: 66vw;
+    padding-left: 20px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .overlay {
     position: fixed; 
@@ -94,4 +105,8 @@ nav {
 }
 .hidden {
     display: none;
+}
+.nav-icon-container{
+    height: 17px;
+    width: 17px;
 }

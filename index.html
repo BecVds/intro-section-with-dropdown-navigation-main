@@ -14,24 +14,33 @@
 
 </head>
 <body>
-  <div class="overlay hidden"></div>
-  <div class="mobile-display hidden">        
+  <div class="overlay"></div>
+  <div class="mobile-display">        
     <button class="burger-nav-button">
       <img src="./images/icon-close-menu.svg" alt="close-menu-button">
     </button>        
     <div class="side-nav">
-      <button>Features</button>
+      <button>
+        Features
+        <img src="./images/icon-arrow-down.svg" alt="show-sub-menu">
+      </button>
       <div class="mobile-drop-down features">
         <button>
-          <img src="./images/icon-todo.svg" alt="todo-icon">
+          <div class=nav-icon-container>
+            <img src="./images/icon-todo.svg" alt="todo-icon">
+          </div>
           Todo List
         </button>
         <button>
-          <img src="./images/icon-calendar.svg" alt="calender-icon">
+          <div class=nav-icon-container>
+            <img src="./images/icon-calendar.svg" alt="calender-icon">
+          </div>
           Calender
         </button>
         <button>
-          <img src="./images/icon-reminders.svg" alt="reminders-icon">
+          <div class=nav-icon-container>
+            <img src="./images/icon-reminders.svg" alt="reminders-icon">
+          </div>
           Reminders
         </button>
         <button>
@@ -41,18 +50,23 @@
           Planning
         </button>
       </div>
-      <button>Company</button>
+      <button>
+        Company
+        <img src="./images/icon-arrow-down.svg" alt="show-sub-menu">
+      </button>
       <div class="mobile-drop-down company">
         <button>
-          Todo List
+          History
         </button>
         <button>
-          Calender
+          Our Team
         </button>
         <button>
-          Reminders
+          Blog
         </button>
       </div>
+      <button>Careers</button>
+      <button>About</button>
     </div>
   </div>
   <nav>
