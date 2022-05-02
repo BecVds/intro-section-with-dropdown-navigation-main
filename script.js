@@ -4,19 +4,23 @@ const SIDE_NAV = document.querySelector('.mobile-display');
 const BUTTON_FEATURES = document.querySelector('.features-button');
 const BUTTON_COMPANY = document.querySelector('.company-button');
 const SUB_OPTIONS_FEATURES = document.querySelector('.features');
-const SUB_OPTIONS_COMPANY = document.querySelector('.company')
+const SUB_OPTIONS_COMPANY = document.querySelector('.company');
+const OVERLAY = document.querySelector('.overlay');
 
 
 
+function onInit() {
+    MENU_OPEN_BUTTON.addEventListener('click', menuController);
+    MENU_CLOSE_BUTTON.addEventListener('click', menuController);
+    
+    BUTTON_FEATURES.addEventListener('click', featuresButtonController);
+    BUTTON_COMPANY.addEventListener('click', companyButtonController);    
+}
 
-MENU_OPEN_BUTTON.addEventListener('click', menuController);
-MENU_CLOSE_BUTTON.addEventListener('click', menuController);
-
-BUTTON_FEATURES.addEventListener('click', featuresButtonController);
-BUTTON_COMPANY.addEventListener('click', companyButtonController);
 
 function menuController() {
     SIDE_NAV.classList.toggle('hidden');
+    OVERLAY.classList.toggle('hidden');
 }
 
 function featuresButtonController() {
@@ -30,3 +34,5 @@ function companyButtonController() {
     SUB_OPTIONS_COMPANY.classList.toggle('hidden');
     arrow.classList.toggle('rotated');
 }
+
+onInit();
