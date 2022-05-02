@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: 'Epilogue', sans-serif;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 15px;
+    position: relative;
+}
+
+.img-container {
+    width: 100vw;
+}
+.img-container img {
+    width: 100%;
+}
+.main-container {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+.burger-nav-button {
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.left-container button {
+    border: none;
+    padding: 15px 25px;
+    background-color: #151515;
+    color: #ffffff;
+    border-radius: 15px;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+.left-container {
+    margin: 20px;
+}
+.left-container p {
+    margin-bottom: 30px;
+    color: #676767;
+    line-height: 150%;
+}
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.img-container {
+    width: 100%;
+}
+.mobile-display {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: rgb(255, 255, 255);    
+    top: 0px;
+    padding-top: 20px;
+    z-index: 3;
+    height: 100vh; 
+}
+.mobile-drop-down > button {
+    padding-left: 20px;
+}
+.mobile-drop-down {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.side-nav button {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 30px 20px;
+}
+.mobile-display .burger-nav-button { 
+    padding-right: 15px;  
+}
+.side-nav {
+    width: 66vw;
+    max-width: 250px;
+    padding-left: 20px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.overlay {
+    position: fixed; 
+    width: 100vw; 
+    height: 100vh; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.75); 
+    z-index: 2;
+}
+.hidden {
+    display: none;
+}
+.nav-icon-container {
+    height: 17px;
+    width: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.desktop-display {
+    display: none;
+}
+
+.desktop-display > .buttons > .left > .desktop-menu-item-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.desktop-display > .buttons > .left > .desktop-menu-item-container .submenu {
+    display: none;
+    position: absolute;
+    background-color: blueviolet;
+    bottom: 0;
+    transform: translateY(calc(100%));
+    padding: 25px;
+}
+.desktop-display > .buttons > .left > .desktop-menu-item-container .features {
+    right: 0;
+}
+
+.desktop-display > .buttons > .left > .desktop-menu-item-container:hover .submenu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.15);
+    font-family: 'Epilogue', sans-serif;
+    font-size: 13px;
+}
+.desktop-image {
+    display: none;
+}
+.mobile-image {    
+    width: 100%;
+}
+button {
+    cursor: pointer;
+}
+.side-nav button img {    
+    transition: all 0.3s ease-in-out 0s;
+}
+.rotated {
+    transform: rotate(180deg);
+}
+
+/* desktop view */
+
+@media only screen and (min-width: 768px){
+    .mobile-display {
+        display: none;
+    }
+    .burger-nav-button {
+        display: none;
+    }
+    nav {
+        margin: 25px 50px;
+    }
+    .left-logo {
+        display: flex;
+        align-items: center;
+    }
+    .desktop-display {
+        display: block;
+        width: 100%;
+        margin-left: 50px;
+    }
+    .desktop-display > .buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu-items {
+        display: flex;
+        white-space: nowrap;
+        align-items: center;
+        gap: 10px;
+    }
+    .buttons > div {
+        display: flex;
+        gap: 30px;
+    }
+    .desktop-nav-button {        
+        background-color: transparent;
+        color: #525252;
+        padding: 0px;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    .desktop-nav-button img {        
+        transition: all 0.3s ease-in-out 0s;
+    }
+    .desktop-display > .buttons > .left > .desktop-menu-item-container:hover .desktop-nav-button img {
+        transform: rotate(180deg);
+    }
+    .register {
+        border: 1px solid rgb(21, 21, 21);
+        border-radius: 10px;
+        padding: 10px 15px;
+    }
+    .hero-image {
+        max-height: 100%;
+        max-width: 50%;
+        margin: 20px;
+    }
+    .mobile-image {
+        display: none;
+    }
+    .desktop-image {
+        display: block;
+        max-height: 100%;
+        max-width: 100%;
+    }
+    .main-container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10%;
+        align-items: center;
+        max-height: 80vh;
+        max-width: 1050px;
+        text-align: left;
+    }
+    .mainBody {
+        display: flex;
+        justify-content: center;
+    }
+    .left-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    .left-container > h1 {
+        font-size: 60px;
+        margin-bottom: 0px;
+    }
+    .left-container > button {
+        max-width: fit-content;
+        background-color: rgb(21, 21, 21);
+        color: rgb(255, 255, 255);
+        border: 2px solid rgb(23, 23, 23);
+    }
+    .left-container > button:hover {
+        background-color: transparent;
+        color: rgb(21, 21, 21); 
+        cursor: pointer;
+    }
+    .logos {
+        margin-top: 50px;
+    }
+}
