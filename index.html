@@ -9,22 +9,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
-  
+  <script src="./script.js" defer></script>
+
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
 </head>
 <body>
-  <div class="overlay"></div>
-  <div class="mobile-display">        
-    <button class="burger-nav-button">
+  <div class="overlay hidden"></div>
+
+
+  <!-- mobile nav -->
+  <div class="mobile-display hidden">        
+    <button class="burger-nav-button close">
       <img src="./images/icon-close-menu.svg" alt="close-menu-button">
     </button>        
     <div class="side-nav">
-      <button>
+      <button class="features-button">
         Features
         <img src="./images/icon-arrow-down.svg" alt="show-sub-menu">
       </button>
-      <div class="mobile-drop-down features">
+      <div class="mobile-drop-down features hidden">
         <button>
           <div class=nav-icon-container>
             <img src="./images/icon-todo.svg" alt="todo-icon">
@@ -50,11 +54,11 @@
           Planning
         </button>
       </div>
-      <button>
+      <button class="company-button">
         Company
         <img src="./images/icon-arrow-down.svg" alt="show-sub-menu">
       </button>
-      <div class="mobile-drop-down company">
+      <div class="mobile-drop-down company hidden">
         <button>
           History
         </button>
@@ -69,28 +73,83 @@
       <button>About</button>
     </div>
   </div>
-  <nav>
+  
+  <!-- desktop nav -->
+  <nav>    
     <div class="left-logo">
       <img src="./images/logo.svg" alt="logo">
     </div>
-    <div class="desktop-display hidden">
+    <div class="desktop-display">
       <div class="buttons">
         <div class="left">
-          <button>Features</button>
-          <button>Company</button>
-          <button>Careers</button>
-          <button>About</button>
+          <div class="desktop-menu-item-container">
+            <button class="desktop-nav-button">
+              Features
+              <div>
+                <img src="./images/icon-arrow-down.svg" alt="arrow">
+              </div>
+            </button>
+            <div class="submenu features">
+              <div class="menu-items">
+                <div class="nav-icon-container">
+                  <img src="./images/icon-todo.svg" alt="icon">
+                </div>
+                Todo List
+              </div>
+              <div class="menu-items">
+                <div class="nav-icon-container">
+                  <img src="./images/icon-calendar.svg" alt="icon">
+                </div>
+                Calender
+              </div>
+              <div class="menu-items">
+                <div class="nav-icon-container">
+                  <img src="./images/icon-reminders.svg" alt="icon">
+                </div>
+                Reminders
+              </div>
+              <div class="menu-items">
+                <div class="nav-icon-container">
+                  <img src="./images/icon-planning.svg" alt="icon">
+                </div>
+                Planning
+              </div>
+            </div>
+          </div>
+          <div class="desktop-menu-item-container">
+            <button class="desktop-nav-button">
+              Company
+              <div>
+                <img src="./images/icon-arrow-down.svg" alt="arrow">
+              </div>
+            </button>
+            <div class="submenu company">
+              <div class="menu-items">
+                History
+              </div>
+              <div class="menu-items">
+                Our Team
+              </div>
+              <div class="menu-items">
+                Blog
+              </div>
+            </div>
+          </div>
+          <button class="desktop-nav-button">Careers</button>
+          <button class="desktop-nav-button">About</button>
         </div>
         <div class="right">
-          <button>Login</button>
-          <button>Register</button>
+          <button class="desktop-nav-button">Login</button>
+          <button class="desktop-nav-button register">Register</button>
         </div>
       </div>
     </div>
-    <button class="burger-nav-button">
+    <button class="burger-nav-button open">
       <img src="./images/icon-menu.svg" alt="menu-button">
     </button>    
   </nav>
+
+  <!-- body content -->
   <div class="mainBody">    
     <div class="main-container">
       <div class="left-container">
@@ -115,8 +174,9 @@
           </div>
         </div>
       </div>
-      <div class="img-container">
-        <img src="./images/image-hero-mobile.png" alt="hero image">
+      <div class="hero-image">
+        <img class="mobile-image" src="./images/image-hero-mobile.png" alt="hero-image">
+        <img class="desktop-image" src="./images/image-hero-desktop.png" alt="hero-image">
       </div>
     </div>
   </div>
